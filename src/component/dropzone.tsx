@@ -83,7 +83,6 @@ export default function Dropzone() {
     "video/*": [],
   };
 
-  // DropBox Designing
   const handleHover = (): void => setIsHover(true);
   const handleExitHover = (): void => setIsHover(false);
   const handleUpload = (data: Array<any>): void => {
@@ -106,7 +105,6 @@ export default function Dropzone() {
     setActions(tmp);
     toast.success("File uploaded");
   };
-
   const handleSelectedChange = (event: any, action: Action) => {
     let value = event.target.value;
     if (extensions.audio.includes(value)) {
@@ -134,11 +132,8 @@ export default function Dropzone() {
     a.style.display = "none";
     a.href = action.url;
     a.download = action.output;
-
     document.body.appendChild(a);
     a.click();
-
-    // Clean up after download
     URL.revokeObjectURL(action.url);
     document.body.removeChild(a);
   };
@@ -186,13 +181,11 @@ export default function Dropzone() {
     setActions(
       actions.map((action): Action => {
         if (action.file_name === file_name) {
-          console.log("FOUND");
           return {
             ...action,
             to,
           };
         }
-
         return action;
       })
     );
@@ -202,7 +195,6 @@ export default function Dropzone() {
     actions.forEach((action: Action) => {
       if (!action.to) tmp_is_ready = false;
     });
-    console.log(actions);
     setIsReady(tmp_is_ready);
   };
   const deleteAction = (action: Action): void => {
@@ -225,7 +217,6 @@ export default function Dropzone() {
     ffmpegRef.current = ffmpeg_response;
     setIsLoaded(true);
   };
-
   if (actions.length) {
     return (
       <div className=" maincontainer">
