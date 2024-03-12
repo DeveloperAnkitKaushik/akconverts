@@ -1,0 +1,102 @@
+.red {
+    height: 100%;
+}
+
+.container {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+.innercontainer {
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.heading {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.para {
+    font-size: 1.1rem;
+    color: rgb(92, 92, 92);
+    text-align: center;
+}
+
+
+.btngrad {
+    background-image: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btngrad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn {
+    width: 200px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.colorsupport {
+    background-color: #00042b;
+}
+
+.coverimage {
+    border: none;
+    margin-bottom: -5rem;
+}
+
+
+@media(max-width: 1024px) {
+    .innercontainer {
+        max-width: 80%;
+    }
+
+    .innercontainer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media(max-width: 790px) {
+    .innercontainer {
+        max-width: 100%;
+    }
+
+    .coverimage {
+        margin: 0rem;
+    }
+}
