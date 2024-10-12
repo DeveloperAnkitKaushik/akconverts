@@ -40,7 +40,7 @@ const Navbar = () => {
               Home
             </Link>
             <a
-              href="https://ankit-kaushik.web.app/"
+              href="https://kaushikankit.vercel.app/"
               className={styles.link}
               target="_blank"
             >
